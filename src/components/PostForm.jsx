@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createPost } from "../actions/postActions";
 
@@ -59,9 +59,9 @@ class PostForm extends Component {
 		);
 	}
 }
-
-PostForm.Proptypes = {
-	createPost: Proptypes.func.isRequired
+// eslint-disable-next-line react/no-typos
+PostForm.PropTypes = {
+	createPost: PropTypes.func.isRequired
 }
 
 export default connect(null, { createPost })(PostForm);

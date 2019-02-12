@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchPosts } from "../actions/postActions";
 
@@ -32,13 +32,13 @@ class Posts extends Component {
       </div>
     );
   }
-}
-
-Posts.Proptypes = {
-	fetchPosts: Proptypes.func.isRequired,
-  posts: Proptypes.array.isRequired,
-  newPost: Proptypes.object
-}
+};
+// eslint-disable-next-line react/no-typos
+Posts.PropTypes = {
+	fetchPosts: PropTypes.func.isRequired,
+  posts: PropTypes.array.isRequired,
+  newPost: PropTypes.object
+};
 
 const mapStateToProps = state => ({
   posts: state.posts.items,
